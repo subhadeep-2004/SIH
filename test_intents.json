@@ -1,0 +1,102 @@
+{
+  "intents": [
+      {
+          "tag": "start",
+          "patterns": ["start", "begin", "hello", "hi"],
+          "responses": ["Welcome! Please choose an option: a) Manual Locate"]
+      },
+      {
+          "tag": "manual_locate",
+          "patterns": ["manual locate", "locate", "location"],
+          "responses": ["Please enter your location and the museum name."]
+      },
+
+      {
+        "tag": "invalid_option",
+        "patterns": [""],
+        "responses": ["Sorry! What would you like to do next? a) Book a ticket b) About the museum c) Timings"]
+
+      },
+
+
+
+      {
+          "tag": "location_and_museum",
+          "patterns": ["{location_name}, {museum_name}"],
+          "responses": ["Great! What would you like to do next? a) Book a ticket b) About the museum c) Timings"]
+      },
+      {
+          "tag": "invalid_location_format",
+          "patterns": [],
+          "responses": ["Please enter the location and museum name separated by a comma and a space, like this: 'Location, Museum Name'."]
+      },
+      {
+          "tag": "book_ticket",
+          "patterns": ["book a ticket", "ticket booking", "I want to book"],
+          "responses": ["Please provide the date for the booking."]
+      },
+      {
+          "tag": "about_museum",
+          "patterns": ["about the museum", "museum info", "information about museum", "description of the museum"],
+          "responses": ["Here is some information about the museum..."]
+      },
+      {
+          "tag": "museum_timings",
+          "patterns": ["timings", "museum timings", "opening hours"],
+          "responses": ["The museum is open from 10 AM to 6 PM. Please write start to start again."]
+      },
+      {
+          "tag": "provide_date",
+          "patterns": ["[date]", "on [date]", "for [date]"],
+          "responses": ["Booking a ticket for {date}."]
+      },
+      {
+          "tag": "invalid_date_format",
+          "patterns": [],
+          "responses": ["Please provide the date in dd/mm/yyyy format."]
+      },
+      {
+          "tag": "provide_tickets",
+          "patterns": ["I want {number_of_tickets} tickets", "Book {number_of_tickets} tickets for me", "I need {number_of_tickets} tickets", "Can I get {number_of_tickets} tickets?"],
+          "responses": ["{tickets} tickets have been booked. Please provide the details of the visitors."]
+      },
+      {
+          "tag": "invalid_tickets_number",
+          "patterns": [],
+          "responses": ["Please provide a valid number of tickets."]
+      },
+      {
+          "tag": "next_person_details",
+          "patterns": [],
+          "responses": ["Details received. Please provide details for the next person ({count} of {total})."]
+      },
+      {
+          "tag": "invalid_details_format",
+          "patterns": [],
+          "responses": ["Please provide details in the correct format: 'Name, Age, Gender, Nationality[Indian (y/n)]'."]
+      },
+      {
+          "tag": "booking_complete",
+          "patterns": [],
+          "responses": ["\nThank you! Your booking is complete."]
+      },
+      {
+          "tag": "confirm_nationality",
+          "patterns": ["Yes", "No"],
+          "responses": {
+              "Yes": "Thank you! Your booking is confirmed. Returning to the main menu...",
+              "No": "Thank you! Your booking is confirmed. Returning to the main menu..."
+          }
+      },
+      {
+          "tag": "invalid_nationality_response",
+          "patterns": [],
+          "responses": ["Please respond with 'Yes' or 'No'."]
+      },
+      {
+          "tag": "restart",
+          "patterns": [],
+          "responses": ["Please type 'start' to begin again."]
+      }
+  ]
+}
