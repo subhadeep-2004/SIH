@@ -5,6 +5,12 @@
       "patterns": ["start", "begin", "hello", "hi"],
       "responses": ["Welcome! Please choose an option: a) Manual Locate b) Show Tickets c) Delete Tickets"]
     },
+
+    {
+      "tag": "invalid_start",
+      "patterns": [],
+      "responses": ["Sorry! Please choose an option: a) Manual Locate b) Show Tickets c) Delete Tickets"]
+    },
     {
       "tag": "delete_ticket",
       "patterns": ["delete ticket", "remove ticket", "cancel ticket", ""],
@@ -32,7 +38,7 @@
     },
     {
       "tag": "invalid_option",
-      "patterns": [""],
+      "patterns": [],
       "responses": ["Sorry! What would you like to do next? a) Book a ticket b) About the museum c) Timings"]
     },
     {
@@ -58,7 +64,7 @@
     {
       "tag": "museum_timings",
       "patterns": ["timings", "museum timings", "opening hours"],
-      "responses": ["The museum is open from 10 AM to 6 PM. Please write start to start again."]
+      "responses": ["The museum is open from 10 AM to 6 PM."]
     },
     {
       "tag": "provide_date",
@@ -73,7 +79,7 @@
     {
       "tag": "provide_tickets",
       "patterns": ["I want {number_of_tickets} tickets", "Book {number_of_tickets} tickets for me", "I need {number_of_tickets} tickets", "Can I get {number_of_tickets} tickets?"],
-      "responses": ["{tickets} tickets have been booked. Please provide the details of the visitors."]
+      "responses": ["{tickets} tickets will be booked. Please provide the details of the visitors."]
     },
     {
       "tag": "invalid_tickets_number",
